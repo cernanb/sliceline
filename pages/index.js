@@ -1,209 +1,171 @@
-import Head from 'next/head'
-
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <div>
+      <div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+        <div class="absolute inset-0">
+          <div class="bg-white h-1/3 sm:h-2/3"></div>
         </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+        <div class="relative max-w-7xl mx-auto">
+          <div class="text-center">
+            <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+              From the blog
+            </h2>
+            <p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero labore natus atque, ducimus sed.
+            </p>
+          </div>
+          <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <p class="text-sm leading-5 font-medium text-indigo-600">
+                    <a href="#" class="hover:underline">
+                      Blog
+                    </a>
+                  </p>
+                  <a href="#" class="block">
+                    <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">Boost your conversion rate</h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius,
+                      ut atque fuga culpa, similique sequi cum eos quis dolorum.
+                    </p>
+                  </a>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div class="flex-shrink-0">
+                    <a href="#">
+                      <img
+                        class="h-10 w-10 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm leading-5 font-medium text-gray-900">
+                      <a href="#" class="hover:underline">
+                        Roel Aufderhar
+                      </a>
+                    </p>
+                    <div class="flex text-sm leading-5 text-gray-500">
+                      <time dateTime="2020-03-16">Mar 16, 2020</time>
+                      <span class="mx-1">&middot;</span>
+                      <span>6 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <p class="text-sm leading-5 font-medium text-indigo-600">
+                    <a href="#" class="hover:underline">
+                      Video
+                    </a>
+                  </p>
+                  <a href="#" class="block">
+                    <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                      How to use search engine optimization to drive sales
+                    </h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat
+                      doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo
+                      laudantium.
+                    </p>
+                  </a>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div class="flex-shrink-0">
+                    <a href="#">
+                      <img
+                        class="h-10 w-10 rounded-full"
+                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm leading-5 font-medium text-gray-900">
+                      <a href="#" class="hover:underline">
+                        Brenna Goyette
+                      </a>
+                    </p>
+                    <div class="flex text-sm leading-5 text-gray-500">
+                      <time datetime="2020-03-16">Mar 16, 2020</time>
+                      <span class="mx-1">&middot;</span>
+                      <span>6 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-48 w-full object-cover"
+                  src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+                <div class="flex-1">
+                  <p class="text-sm leading-5 font-medium text-indigo-600">
+                    <a href="#" class="hover:underline">
+                      {' '}
+                      Case Study
+                    </a>
+                  </p>
+                  <a href="#" class="block">
+                    <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">Improve your customer experience</h3>
+                    <p class="mt-3 text-base leading-6 text-gray-500">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo
+                      recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.
+                    </p>
+                  </a>
+                </div>
+                <div class="mt-6 flex items-center">
+                  <div class="flex-shrink-0">
+                    <a href="#">
+                      <img
+                        class="h-10 w-10 rounded-full"
+                        src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm leading-5 font-medium text-gray-900">
+                      <a href="#" class="hover:underline">
+                        Daniela Metz
+                      </a>
+                    </p>
+                    <div class="flex text-sm leading-5 text-gray-500">
+                      <time datetime="2020-03-16">Mar 16, 2020</time>
+                      <span class="mx-1">&middot;</span>
+                      <span>6 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps }) {
                     </svg>
                     Team
                   </a>
-                  <Link href="/projects">
+                  <Link href="/slices">
                     <a className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium text-gray-600 rounded-md hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-100 transition ease-in-out duration-150">
                       <svg
                         className="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
@@ -83,7 +83,7 @@ function MyApp({ Component, pageProps }) {
                           d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
                         />
                       </svg>
-                      Projects
+                      Slices
                     </a>
                   </Link>
                   <a
@@ -227,8 +227,8 @@ function MyApp({ Component, pageProps }) {
                       d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"
                     />
                   </svg>
-                  <Link href="/projects">
-                    <a>Projects</a>
+                  <Link href="/slices">
+                    <a>Slices</a>
                   </Link>
                 </span>
                 <a

@@ -1,0 +1,21 @@
+type Slice {
+  _id: ID!
+  name: String!
+  description: String!
+  photoUrl: String
+}
+
+input SliceInput {
+  _id: ID
+  name: String!
+  description: String!
+  photoUrl: String
+}
+
+type Mutation {
+  addSlice(slice: SliceInput): Slice!
+}
+
+type Query {
+  slices: [Slice]
+}

@@ -1,7 +1,7 @@
 import Slice from './Slice'
 import Link from 'next/link'
 
-const SliceList = () => {
+const SliceList = ({ slices }) => {
   return (
     <section>
       <h2>Slice List</h2>
@@ -32,9 +32,9 @@ const SliceList = () => {
         </div>
       </div>
       <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
-        <Slice />
-        <Slice />
-        <Slice />
+        {slices.map((slice) => (
+          <Slice slice={slice} />
+        ))}
       </div>
     </section>
   )

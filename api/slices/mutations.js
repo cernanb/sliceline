@@ -5,7 +5,7 @@ export const slicesMutations = {
     async addSlice(_, { slice }) {
       const newSlice = new Slice(slice)
       await newSlice.save()
-      console.log('add slice', slice)
+      return newSlice
     }
   }
 }

@@ -33,7 +33,7 @@ const SliceList = ({ slices }) => {
       </div>
       <div className="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
         {slices.map((slice) => (
-          <Slice slice={slice} />
+          <Slice key={slice._id} slice={slice} />
         ))}
       </div>
     </section>

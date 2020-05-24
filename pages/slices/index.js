@@ -16,7 +16,6 @@ const SLICES_QUERY = gql`
 function Slices() {
   const { data, loading, error } = useQuery(SLICES_QUERY)
   if (loading) return <div>Loading...</div>
-  console.log(data.slices)
   return (
     <div className="py-4 flex">
       <SliceList slices={data.slices} />

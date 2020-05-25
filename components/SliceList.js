@@ -5,7 +5,7 @@ import Slice from './Slice'
 import Link from 'next/link'
 
 const SLICES_QUERY = gql`
-  query SLICES_QUERY {
+  query slicesQuery {
     slices {
       _id
       name

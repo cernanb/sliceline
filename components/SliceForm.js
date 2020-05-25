@@ -73,7 +73,7 @@ const SliceForm = ({ createSlice }) => {
 
             <div className="sm:col-span-6">
               <label htmlFor="cover_photo" className="block text-sm leading-5 font-medium text-gray-700">
-                Photo
+                Photo <span className="text-gray-400">(Not yet supported)</span>
               </label>
               <div className="mt-2 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
                 <div className="text-center">

@@ -10,7 +10,7 @@ export const slicesMutations = {
     },
     async addReview(_, args, ctx) {
       const slice = await Slice.findById(args.sliceId)
-      const newReview = await Review.create({ ...args.review, createdAt: Date.now(), slice: slice })
+      const newReview = await Review.create({ ...args.review, createdAt: Date.now() })
       slice.reviews.push(newReview)
       await slice.save()
       return slice

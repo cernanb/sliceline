@@ -10,6 +10,9 @@ const SLICES_QUERY = gql`
       _id
       name
       description
+      reviews {
+        _id
+      }
     }
   }
 `

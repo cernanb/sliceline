@@ -38,10 +38,5 @@ export const slicesResolvers = {
       }
       return null
     }
-  }),
-  Slice: {
-    reviews(parent) {
-      return [{ reviewer: 'Cernan', date: Date.now(), content: 'Good slice' }]
-    }
-  }
+  })
 }

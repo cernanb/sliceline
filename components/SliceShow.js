@@ -1,12 +1,28 @@
+import { useState } from 'react'
 import { withApollo } from '../lib/apollo'
-import { useQuery } from '@apollo/react-hooks'
+import NProgress from 'nprogress' //nprogress module
+import { useQuery, useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 
 const SINGLE_SLICE_QUERY = gql`
   query singleSliceQuery($id: ID!) {
     slice(id: $id) {
+      _id
       name
       description
+      reviews {
+        createdAt
+        content
+        reviewer
+      }
+    }
+  }
+`
+
+const CREATE_REVIEW_MUTATION = gql`
+  mutation addReviewMutation($sliceId: ID, $review: ReviewInput) {
+    addReview(sliceId: $sliceId, review: $review) {
+      _id
     }
   }
 `
@@ -17,6 +33,12 @@ const SliceShow = ({ id }) => {
     variables: { id }
   })
 
+  const [addReview, { reviewData, reviewLoading, reviewError }] = useMutation(CREATE_REVIEW_MUTATION, {
+    refetchQueries: ['singleSliceQuery']
+  })
+
+  const [username, setUsername] = useState('')
+  const [content, setContent] = useState('')
   if (loading) return <p>Loading...</p>
   const { slice } = data
   return (
@@ -129,7 +151,22 @@ const SliceShow = ({ id }) => {
           />
         </div>
       </div>
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          NProgress.start()
+          console.log('submitting review')
+          addReview({
+            variables: {
+              sliceId: slice._id,
+              review: { content: content, reviewer: username, createdAt: Date.now() }
+            }
+          })
+          setContent('')
+          setUsername('')
+          NProgress.done()
+        }}
+      >
         <div>
           <div>
             <div>
@@ -143,6 +180,8 @@ const SliceShow = ({ id }) => {
                 <div class="mt-1 flex rounded-md shadow-sm">
                   <input
                     id="reviewer"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                     class="flex-1 form-input block w-full rounded-none rounded-r-md transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   />
                 </div>
@@ -155,6 +194,8 @@ const SliceShow = ({ id }) => {
                 <div class="mt-1 rounded-md shadow-sm">
                   <textarea
                     id="about"
+                    value={content}
+                    onChange={(e) => setContent(e.target.value)}
                     rows="3"
                     class="form-textarea block w-full transition duration-150 ease-in-out sm:text-sm sm:leading-5"
                   ></textarea>
@@ -166,14 +207,6 @@ const SliceShow = ({ id }) => {
         </div>
         <div class="mt-8 border-t border-gray-200 pt-5">
           <div class="flex justify-end">
-            <span class="inline-flex rounded-md shadow-sm">
-              <button
-                type="button"
-                class="py-2 px-4 border border-gray-300 rounded-md text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition duration-150 ease-in-out"
-              >
-                Cancel
-              </button>
-            </span>
             <span class="ml-3 inline-flex rounded-md shadow-sm">
               <button
                 type="submit"
@@ -188,22 +221,12 @@ const SliceShow = ({ id }) => {
       <div class="bg-white shadow overflow-hidden mt-4 sm:rounded-lg">
         <div class="px-4 py-5 sm:p-0">
           <dl>
-            <div class="mt-8 sm:mt-0 sm:grid sm:grid-cols-3 sm:gap-4 sm:border-t sm:border-gray-200 sm:px-6 sm:py-5">
-              <dt class="text-sm leading-5 font-medium text-gray-500">cernanb</dt>
-              <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur
-                qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure
-                nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
-              </dd>
-            </div>
-            <div class="mt-8 sm:mt-0 sm:grid sm:grid-cols-3 sm:gap-4 sm:border-t sm:border-gray-200 sm:px-6 sm:py-5">
-              <dt class="text-sm leading-5 font-medium text-gray-500">cernanb</dt>
-              <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">
-                Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur
-                qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure
-                nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.
-              </dd>
-            </div>
+            {slice.reviews.map((review) => (
+              <div class="mt-8 sm:mt-0 sm:grid sm:grid-cols-3 sm:gap-4 sm:border-t sm:border-gray-200 sm:px-6 sm:py-5">
+                <dt class="text-sm leading-5 font-medium text-gray-500">{review.reviewer}</dt>
+                <dd class="mt-1 text-sm leading-5 text-gray-900 sm:mt-0 sm:col-span-2">{review.content}</dd>
+              </div>
+            ))}
           </dl>
         </div>
       </div>

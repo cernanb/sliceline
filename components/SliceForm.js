@@ -1,15 +1,30 @@
 import { useState } from 'react'
 import Router from 'next/router'
+import { withApollo } from '../lib/apollo'
+
+import { useMutation } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+
+const CREATE_SLICE_MUTATION = gql`
+  mutation CREATE_SLICE_MUTATION($slice: SliceInput) {
+    addSlice(slice: $slice) {
+      _id
+    }
+  }
+`
 
 const SliceForm = ({ createSlice }) => {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
 
+  const [addSlice, { data }] = useMutation(CREATE_SLICE_MUTATION)
+
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault()
-        createSlice({ name, description })
+        addSlice({ variables: { slice: { name, description } } })
+        Router.replace('/slices')
       }}
     >
       <div>
@@ -113,4 +128,4 @@ const SliceForm = ({ createSlice }) => {
   )
 }
 
-export default SliceForm
+export default withApollo({ ssr: true })(SliceForm)

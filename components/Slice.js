@@ -1,9 +1,14 @@
+import Link from 'next/link'
 const Slice = ({ slice }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
       <img className="h-48 w-full object-cover" src="https://via.placeholder.com/150" alt="Sunset in the mountains" />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{slice.name}</div>
+        <div className="font-bold text-xl mb-2">
+          <Link href={`slices/[id]`} as={`/slices/${slice._id}`}>
+            <a>{slice.name}</a>
+          </Link>
+        </div>
         <p className="text-gray-700 text-base">{slice.description}</p>
       </div>
     </div>

@@ -1,8 +1,17 @@
+scalar Date
+type Review {
+  _id: ID!
+  content: String!
+  createdAt: Date
+  reviewer: String!
+}
+
 type Slice {
   _id: ID!
   name: String!
   description: String!
   photoUrl: String
+  reviews: [Review]
 }
 
 input SliceInput {
@@ -12,10 +21,19 @@ input SliceInput {
   photoUrl: String
 }
 
+input ReviewInput {
+  _id: ID
+  content: String!
+  createdAt: Date
+  reviewer: String!
+}
+
 type Mutation {
   addSlice(slice: SliceInput): Slice!
+  addReview(sliceId: ID, review: ReviewInput): Slice!
 }
 
 type Query {
   slices: [Slice]
+  slice(id: ID): Slice
 }

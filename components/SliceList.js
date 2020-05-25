@@ -1,7 +1,23 @@
+import { withApollo } from '../lib/apollo'
+import { useQuery } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
 import Slice from './Slice'
 import Link from 'next/link'
 
-const SliceList = ({ slices }) => {
+const SLICES_QUERY = gql`
+  query SLICES_QUERY {
+    slices {
+      _id
+      name
+      description
+    }
+  }
+`
+
+const SliceList = () => {
+  const { data, loading, error } = useQuery(SLICES_QUERY)
+  if (loading) return <div>Loading...</div>
+  const { slices } = data
   return (
     <section>
       <h2>Slice List</h2>
@@ -40,4 +56,4 @@ const SliceList = ({ slices }) => {
   )
 }
 
-export default SliceList
+export default withApollo({ ssr: true })(SliceList)

@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Next.js TailwindCSS</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet"></link>
       </Head>
       <div className="h-screen flex overflow-hidden bg-white">
         <div className="md:hidden">

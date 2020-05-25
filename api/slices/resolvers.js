@@ -20,7 +20,6 @@ export const slicesResolvers = {
       } catch (e) {
         console.log('error', e)
       }
-      console.log(args)
     }
   },
   Date: new GraphQLScalarType({

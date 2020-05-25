@@ -17,7 +17,9 @@ const SliceForm = ({ createSlice }) => {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
 
-  const [addSlice, { data }] = useMutation(CREATE_SLICE_MUTATION)
+  const [addSlice, { data }] = useMutation(CREATE_SLICE_MUTATION, {
+    refetchQueries: ['slicesQuery']
+  })
 
   return (
     <form

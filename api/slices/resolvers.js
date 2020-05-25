@@ -3,9 +3,13 @@ import Slice from './slices'
 export const slicesResolvers = {
   Query: {
     async slices() {
-      const data = await Slice.find()
+      try {
+        const data = await Slice.find()
 
-      return data
+        return data
+      } catch (e) {
+        console.log('error', e)
+      }
     }
   }
 }

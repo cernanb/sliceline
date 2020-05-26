@@ -302,7 +302,7 @@ function Home() {
               <blockquote>
                 <div class="text-2xl leading-9 font-medium text-gray-900">
                   <p>
-                    I was having a birthday party for my dog. Stremed the entire event to the internets. Invited my
+                    I was having a birthday party for my dog. Streamed the entire event to the internets. Invited my
                     friends and their dogs. While we had plenty of dog food, we ran out of human food. I ordered slices
                     on sliceline and out pizza was here within an hour. Thanks sliceline!
                   </p>

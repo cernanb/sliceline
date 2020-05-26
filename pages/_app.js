@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Next.js TailwindCSS</title>
+        <title>sliceline</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet"></link>
       </Head>

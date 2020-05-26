@@ -144,7 +144,7 @@ function Home() {
                 </svg>
               </div>
               <div class="mt-5">
-                <h5 class="text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</h5>
+                <h5 class="text-lg leading-6 font-medium text-gray-900">Fresh made slices</h5>
                 <p class="mt-2 text-base leading-6 text-gray-500">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
                   iste dolor cupiditate blanditiis ratione.
@@ -182,7 +182,7 @@ function Home() {
                 </svg>
               </div>
               <div class="mt-5">
-                <h5 class="text-lg leading-6 font-medium text-gray-900">Transfers are instant</h5>
+                <h5 class="text-lg leading-6 font-medium text-gray-900">High quality toppings</h5>
                 <p class="mt-2 text-base leading-6 text-gray-500">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque,
                   iste dolor cupiditate blanditiis ratione.
@@ -302,8 +302,9 @@ function Home() {
               <blockquote>
                 <div class="text-2xl leading-9 font-medium text-gray-900">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
-                    molestiae. Numquam corrupti in laborum sed rerum et corporis.
+                    I was having a birthday party for my dog. Stremed the entire event to the internets. Invited my
+                    friends and their dogs. While we had plenty of dog food, we ran out of human food. I ordered slices
+                    on sliceline and out pizza was here within an hour. Thanks sliceline!
                   </p>
                 </div>
                 <footer class="mt-8">
@@ -316,8 +317,8 @@ function Home() {
                       />
                     </div>
                     <div class="ml-4 lg:ml-0">
-                      <div class="text-base leading-6 font-medium text-gray-900">Judith Black</div>
-                      <div class="text-base leading-6 font-medium text-orange-400">CEO, Tuple</div>
+                      <div class="text-base leading-6 font-medium text-gray-900">uzair</div>
+                      <div class="text-base leading-6 font-medium text-orange-400">Youtube</div>
                     </div>
                   </div>
                 </footer>
@@ -394,8 +395,8 @@ function Home() {
               <blockquote>
                 <div class="text-2xl leading-9 font-medium text-gray-900">
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
-                    molestiae. Numquam corrupti in laborum sed rerum et corporis.
+                    I was on a sick Fortnite run (6 hours non-stop) and didn't stop for lunch. I placed a sliceline
+                    order and the slices came within 20 minutes.
                   </p>
                 </div>
                 <footer class="mt-8">
@@ -408,8 +409,8 @@ function Home() {
                       />
                     </div>
                     <div class="ml-4 lg:ml-0">
-                      <div class="text-base leading-6 font-medium text-gray-900">Judith Black</div>
-                      <div class="text-base leading-6 font-medium text-orange-400">CEO, Tuple</div>
+                      <div class="text-base leading-6 font-medium text-gray-900">sifu</div>
+                      <div class="text-base leading-6 font-medium text-orange-400">Twitch</div>
                     </div>
                   </div>
                 </footer>

@@ -3,7 +3,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import { HttpLink } from 'apollo-link-http'
 import fetch from 'isomorphic-unfetch'
 
-console.log(process.env.NODE_ENV)
+// console.log(request.headers.host)
 
 export default function createApolloClient(initialState, ctx) {
   // The `ctx` (NextPageContext) will only be present on the server.
@@ -11,10 +11,8 @@ export default function createApolloClient(initialState, ctx) {
   return new ApolloClient({
     ssrMode: Boolean(ctx),
     link: new HttpLink({
-      uri:
-        process.env.NODE_ENV === 'development'
-          ? 'http://localhost:3000/api/graphql'
-          : 'https://sliceline.now.sh/api/graphql', // Server URL (must be absolute)
+      uri: '/api/graphql',
+
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       fetch
     }),

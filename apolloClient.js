@@ -11,7 +11,7 @@ export default function createApolloClient(initialState, ctx) {
   return new ApolloClient({
     ssrMode: Boolean(ctx),
     link: new HttpLink({
-      uri: '/api/graphql',
+      uri: 'api/graphql',
 
       credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       fetch

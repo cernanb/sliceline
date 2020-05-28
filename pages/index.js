@@ -304,7 +304,7 @@ function Home() {
                   <p>
                     I was having a birthday party for my dog. Streamed the entire event to the internets. Invited my
                     friends and their dogs. While we had plenty of dog food, we ran out of human food. I ordered slices
-                    on sliceline and out pizza was here within an hour. Thanks sliceline!
+                    on sliceline and our pizza was here within an hour. Thanks sliceline!
                   </p>
                 </div>
                 <footer class="mt-8">
